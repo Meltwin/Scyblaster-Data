@@ -1,0 +1,141 @@
+{
+ ┊ arguments: {
+ ┊  ┊ game: [
+ ┊  ┊  ┊ str
+ ┊  ┊  ┊ {
+ ┊  ┊  ┊  ┊ rules: [
+ ┊  ┊  ┊  ┊  ┊ {
+ ┊  ┊  ┊  ┊  ┊  ┊ action: str
+ ┊  ┊  ┊  ┊  ┊  ┊ features: {
+ ┊  ┊  ┊  ┊  ┊  ┊  ┊ is_demo_user: bool
+ ┊  ┊  ┊  ┊  ┊  ┊  ┊ has_custom_resolution: bool
+ ┊  ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊ ]
+ ┊  ┊  ┊  ┊ value: str
+ ┊  ┊  ┊  ┊ [
+ ┊  ┊  ┊  ┊  ┊ str
+ ┊  ┊  ┊  ┊ ]
+ ┊  ┊  ┊ }
+ ┊  ┊ ]
+ ┊  ┊ jvm: [
+ ┊  ┊  ┊ {
+ ┊  ┊  ┊  ┊ rules: [
+ ┊  ┊  ┊  ┊  ┊ {
+ ┊  ┊  ┊  ┊  ┊  ┊ action: str
+ ┊  ┊  ┊  ┊  ┊  ┊ os: {
+ ┊  ┊  ┊  ┊  ┊  ┊  ┊ name: str
+ ┊  ┊  ┊  ┊  ┊  ┊  ┊ version: str
+ ┊  ┊  ┊  ┊  ┊  ┊  ┊ arch: str
+ ┊  ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊ ]
+ ┊  ┊  ┊  ┊ value: [
+ ┊  ┊  ┊  ┊  ┊ str
+ ┊  ┊  ┊  ┊ ]
+ ┊  ┊  ┊  ┊ str
+ ┊  ┊  ┊ }
+ ┊  ┊  ┊ str
+ ┊  ┊ ]
+ ┊ }
+ ┊ assetIndex: {
+ ┊  ┊ id: str
+ ┊  ┊ sha1: str
+ ┊  ┊ size: int
+ ┊  ┊ totalSize: int
+ ┊  ┊ url: str
+ ┊ }
+ ┊ assets: str
+ ┊ complianceLevel: int
+ ┊ downloads: {
+ ┊  ┊ client: {
+ ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊ size: int
+ ┊  ┊  ┊ url: str
+ ┊  ┊ }
+ ┊  ┊ server: {
+ ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊ size: int
+ ┊  ┊  ┊ url: str
+ ┊  ┊ }
+ ┊ }
+ ┊ id: str
+ ┊ javaVersion: {
+ ┊  ┊ component: str
+ ┊  ┊ majorVersion: int
+ ┊ }
+ ┊ libraries: [
+ ┊  ┊ {
+ ┊  ┊  ┊ downloads: {
+ ┊  ┊  ┊  ┊ artifact: {
+ ┊  ┊  ┊  ┊  ┊ path: str
+ ┊  ┊  ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊  ┊  ┊ size: int
+ ┊  ┊  ┊  ┊  ┊ url: str
+ ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊ classifiers: {
+ ┊  ┊  ┊  ┊  ┊ natives-linux: {
+ ┊  ┊  ┊  ┊  ┊  ┊ path: str
+ ┊  ┊  ┊  ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊  ┊  ┊  ┊ size: int
+ ┊  ┊  ┊  ┊  ┊  ┊ url: str
+ ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊  ┊ natives-macos: {
+ ┊  ┊  ┊  ┊  ┊  ┊ path: str
+ ┊  ┊  ┊  ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊  ┊  ┊  ┊ size: int
+ ┊  ┊  ┊  ┊  ┊  ┊ url: str
+ ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊  ┊ natives-windows: {
+ ┊  ┊  ┊  ┊  ┊  ┊ path: str
+ ┊  ┊  ┊  ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊  ┊  ┊  ┊ size: int
+ ┊  ┊  ┊  ┊  ┊  ┊ url: str
+ ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊  ┊ natives-osx: {
+ ┊  ┊  ┊  ┊  ┊  ┊ path: str
+ ┊  ┊  ┊  ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊  ┊  ┊  ┊ size: int
+ ┊  ┊  ┊  ┊  ┊  ┊ url: str
+ ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊ }
+ ┊  ┊  ┊ name: str
+ ┊  ┊  ┊ natives: {
+ ┊  ┊  ┊  ┊ linux: str
+ ┊  ┊  ┊  ┊ osx: str
+ ┊  ┊  ┊  ┊ windows: str
+ ┊  ┊  ┊ }
+ ┊  ┊  ┊ extract: {
+ ┊  ┊  ┊  ┊ exclude: [
+ ┊  ┊  ┊  ┊  ┊ str
+ ┊  ┊  ┊  ┊ ]
+ ┊  ┊  ┊ }
+ ┊  ┊  ┊ rules: [
+ ┊  ┊  ┊  ┊ {
+ ┊  ┊  ┊  ┊  ┊ action: str
+ ┊  ┊  ┊  ┊  ┊ os: {
+ ┊  ┊  ┊  ┊  ┊  ┊ name: str
+ ┊  ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊  ┊ }
+ ┊  ┊  ┊ ]
+ ┊  ┊ }
+ ┊ ]
+ ┊ logging: {
+ ┊  ┊ client: {
+ ┊  ┊  ┊ argument: str
+ ┊  ┊  ┊ file: {
+ ┊  ┊  ┊  ┊ id: str
+ ┊  ┊  ┊  ┊ sha1: str
+ ┊  ┊  ┊  ┊ size: int
+ ┊  ┊  ┊  ┊ url: str
+ ┊  ┊  ┊ }
+ ┊  ┊  ┊ type: str
+ ┊  ┊ }
+ ┊ }
+ ┊ mainClass: str
+ ┊ minimumLauncherVersion: int
+ ┊ releaseTime: str
+ ┊ time: str
+ ┊ type: str
+}

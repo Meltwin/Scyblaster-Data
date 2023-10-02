@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Versions Descriptor - Scyblaster Data</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        #table {
+            overflow: scroll;
+            flex: 1;
+        }
+
+        #mainVersions {
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #mainVersions>div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #mainVersions>div:nth-child(2) {
+            border: 1px solid black
+        }
+
+        #mainVersions>div:nth-child(2)>div {
+            border: 1px solid black;
+            writing-mode: sideways-rl;
+            text-orientation: sideways;
+            overflow: hidden;
+            min-width: 1pt;
+            transition: min-width 0.15s;
+        }
+
+        #mainVersions>div:nth-child(2)>div:hover {
+            border: 1px solid rgb(19, 190, 233);
+            min-width: 18pt;
+        }
+
+        #mainVersions>div:nth-child(3)>div {
+            border-right: 1px solid black;
+            writing-mode: sideways-rl;
+            text-orientation: sideways
+        }
+
+        #hrule {
+            height: 0px;
+            border: 1px solid black;
+        }
+
+        .addition {
+            background-color: rgba(87, 241, 82, 0.699);
+        }
+
+        .removal {
+            color: rgb(235, 43, 43);
+            background-color: rgba(202, 114, 14, 0.575);
+            text-decoration: line-through;
+        }
+
+        .legend {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Scyblaster Data</h1>
+        <h2>Difference between versions descriptors</h2>
+    </div>
+
+    <div id="mainVersions">
+        <h3>Version history (Hover for expanding the cards)</h3>
+        <div>${formats}</div>
+        <div>${versions}</div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; align-items: center;">
+        <h3 style="margin-right: 1em;">Version descriptor formats details</h3>
+        <div style="border: 1px solid black; height: fit-content; padding: 4pt;">
+            <span class="addition legend">text</span> Addition since previous
+            <span class="removal legend">text</span> Removal in next
+        </div>
+    </div>
+    <div id="hrule"></div>
+    <div id="table">
+        <table>
+            <tr style="text-align: center;">${Indexes}</tr>
+            <tr>${Versions}</tr>
+            <tr style="vertical-align: top;">${struct}</tr>
+        </table>
+    </div>
+</body>
