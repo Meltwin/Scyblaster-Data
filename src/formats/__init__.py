@@ -8,7 +8,7 @@ from .scyblaster.HTML import HTMLGenerator
 VERSION_LIST_ENDPOINT = (
         "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json"
     )
-OUTPUT_FOLDER = os.path.join("docs", "formats", "raw")
+OUTPUT_FOLDER = os.path.join("dist", "formats", "raw")
 VERSION_RAW_FOLDER = os.path.join(OUTPUT_FOLDER, "versions")
 ASSETS_RAW_FOLDER = os.path.join(OUTPUT_FOLDER, "assets")
 MAX_ITER = 10000

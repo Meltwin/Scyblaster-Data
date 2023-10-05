@@ -3,8 +3,8 @@ repo_url: https://github.com/Meltwin/ScyBlaster
 site_description: Technical Minecraft documentation useful for the Scyblaster launcher
 site_author: Meltwin
 copyright: © 2023 - Meltwin for the Scyblaster project
-docs_dir: docs
-site_dir: site
+docs_dir: dist
+site_dir: docs
 nav:
   - Home: index.md
   - API DTO Formats:
