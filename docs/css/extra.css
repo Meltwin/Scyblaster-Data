@@ -1,0 +1,8 @@
+.md-typeset__table,
+table {
+    width: 100%;
+}
+
+table {
+    display: table !important;
+}

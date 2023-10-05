@@ -1,0 +1,52 @@
+site_name: Scyblaster Data
+repo_url: https://github.com/Meltwin/ScyBlaster
+site_description: Technical Minecraft documentation useful for the Scyblaster launcher
+site_author: Meltwin
+copyright: © 2023 - Meltwin for the Scyblaster project
+docs_dir: docs
+site_dir: site
+nav:
+  - Home: index.md
+  - API DTO Formats:
+    - Version List: formats/version_list.md
+    - Version Descriptor: formats/version_descriptor.md
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: black
+      accent: orange
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: deep-orange
+      accent: orange
+  features:
+    - content.code.copy
+    - content.code.select
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - markdown_include.include:
+      base_path: docs
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+extra_css:
+  - css/extra.css

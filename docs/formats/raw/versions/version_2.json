@@ -1,0 +1,86 @@
+{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+						"version": str,
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+		},
+	],
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},

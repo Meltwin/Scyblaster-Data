@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Versions Descriptor - Scyblaster Data</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        #table {
+            overflow: scroll;
+            flex: 1;
+        }
+
+        #mainVersions {
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #mainVersions>div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #mainVersions>div:nth-child(2) {
+            border: 1px solid black
+        }
+
+        #mainVersions>div:nth-child(2)>div {
+            border: 1px solid black;
+            writing-mode: sideways-rl;
+            text-orientation: sideways;
+            overflow: hidden;
+            min-width: 1pt;
+            transition: min-width 0.15s;
+        }
+
+        #mainVersions>div:nth-child(2)>div:hover {
+            border: 1px solid rgb(19, 190, 233);
+            min-width: 18pt;
+        }
+
+        #mainVersions>div:nth-child(3)>div {
+            border-right: 1px solid black;
+            writing-mode: sideways-rl;
+            text-orientation: sideways
+        }
+
+        #hrule {
+            height: 0px;
+            border: 1px solid black;
+        }
+
+        .addition {
+            background-color: rgba(87, 241, 82, 0.699);
+        }
+
+        .removal {
+            color: rgb(235, 43, 43);
+            background-color: rgba(202, 114, 14, 0.575);
+            text-decoration: line-through;
+        }
+
+        .legend {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Scyblaster Data</h1>
+        <h2>Difference between versions descriptors</h2>
+    </div>
+
+    <div id="mainVersions">
+        <h3>Version history (Hover for expanding the cards)</h3>
+        <div><div style="flex:66; background-color: #9A83B7;">F 0</div><div style="flex:14; background-color: #B0F7E6;">F 1</div><div style="flex:0; background-color: #8298A4;">F 2</div><div style="flex:10; background-color: #B0F7E6;">F 1</div><div style="flex:17; background-color: #9EE4DF;">F 3</div><div style="flex:3; background-color: #EBB8A6;">F 4</div><div style="flex:5; background-color: #FBB4BB;">F 5</div><div style="flex:22; background-color: #EFA4A7;">F 6</div><div style="flex:0; background-color: #E3E383;">F 7</div><div style="flex:9; background-color: #EFA4A7;">F 6</div><div style="flex:0; background-color: #E3E383;">F 7</div><div style="flex:17; background-color: #EFA4A7;">F 6</div><div style="flex:1; background-color: #A2A9ED;">F 8</div><div style="flex:43; background-color: #EFA4A7;">F 6</div><div style="flex:43; background-color: #FBB4BB;">F 5</div><div style="flex:0; background-color: #EFA4A7;">F 6</div><div style="flex:6; background-color: #FBB4BB;">F 5</div><div style="flex:75; background-color: #95A2CE;">F 9</div><div style="flex:42; background-color: #F5E0C1;">F 10</div><div style="flex:79; background-color: #E995CA;">F 11</div><div style="flex:0; background-color: #CBC1D9;">F 12</div><div style="flex:1; background-color: #E995CA;">F 11</div><div style="flex:145; background-color: #CBC1D9;">F 12</div><div style="flex:2; background-color: #8789CD;">F 13</div><div style="flex:0; background-color: #CBC1D9;">F 12</div><div style="flex:4; background-color: #8789CD;">F 13</div><div style="flex:1; background-color: #F4CAD5;">F 14</div><div style="flex:49; background-color: #9CF3E8;">F 15</div><div style="flex:2; background-color: #F1D2A3;">F 16</div><div style="flex:23; background-color: #EEE8D6;">F 17</div></div>
+        <div><div style="flex:35">Old Alpha</div><div style="flex:26">Old Beta</div><div style="flex:0">1.0</div><div style="flex:2">1.1</div><div style="flex:8">1.2</div><div style="flex:5">1.3</div><div style="flex:8">1.4</div><div style="flex:22">1.5</div><div style="flex:21">1.6</div><div style="flex:79">1.7</div><div style="flex:84">1.8</div><div style="flex:21">1.9</div><div style="flex:19">1.10</div><div style="flex:23">1.11</div><div style="flex:60">1.12</div><div style="flex:51">1.13</div><div style="flex:45">1.14</div><div style="flex:36">1.15</div><div style="flex:50">1.16</div><div style="flex:28">1.17</div><div style="flex:34">1.18</div><div style="flex:56">1.19</div><div style="flex:15">1.20</div></div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; align-items: center;">
+        <h3 style="margin-right: 1em;">Version descriptor formats details</h3>
+        <div style="border: 1px solid black; height: fit-content; padding: 4pt;">
+            <span class="addition legend">text</span> Addition since previous
+            <span class="removal legend">text</span> Removal in next
+        </div>
+    </div>
+    <div id="hrule"></div>
+    <div id="table">
+        <table>
+            <tr style="text-align: center;"><td style="background-color: #9A83B7">Format 0</td><td style="background-color: #B0F7E6">Format 1</td><td style="background-color: #8298A4">Format 2</td><td style="background-color: #9EE4DF">Format 3</td><td style="background-color: #EBB8A6">Format 4</td><td style="background-color: #FBB4BB">Format 5</td><td style="background-color: #EFA4A7">Format 6</td><td style="background-color: #E3E383">Format 7</td><td style="background-color: #A2A9ED">Format 8</td><td style="background-color: #95A2CE">Format 9</td><td style="background-color: #F5E0C1">Format 10</td><td style="background-color: #E995CA">Format 11</td><td style="background-color: #CBC1D9">Format 12</td><td style="background-color: #8789CD">Format 13</td><td style="background-color: #F4CAD5">Format 14</td><td style="background-color: #9CF3E8">Format 15</td><td style="background-color: #F1D2A3">Format 16</td><td style="background-color: #EEE8D6">Format 17</td></tr>
+            <tr><td>rd-132211 - 1.2.4  </td><td>1.2.5 - 13w16a  1.5.2 - 13w23b  </td><td>13w16b - 13w16b  </td><td>13w24a - 13w38c  </td><td>13w39a - 13w41b  </td><td>13w42a - 1.7.2  15w31a - 15w49a  15w49b - 16w04a  </td><td>13w47a - 1.7.5  14w10a - 1.7.9  14w17a - 14w26c  14w28a - 1.8.8  1.8.9 - 1.8.9  </td><td>14w08a - 14w08a  14w11b - 14w11b  </td><td>14w27a - 14w27b  </td><td>16w05a - 1.12.2  </td><td>17w43a - 1.13-pre1  </td><td>1.13-pre2 - 1.14.4-pre7  19w34a - 19w35a  </td><td>1.14.4 - 1.14.4  19w36a - 1.18.2  22w13oneblockatatime - 22w13oneblockatatime  </td><td>22w11a - 22w13a  22w14a - 22w17a  </td><td>22w18a - 22w19a  </td><td>1.19-pre1 - 23w13a_or_b  </td><td>23w14a - 23w17a  </td><td>23w18a - 23w40a  </td></tr>
+            <tr style="vertical-align: top;"><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+						"version": str,
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+		},
+	],
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+<span class="addition">		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+</span><span class="addition"><span class="removal">		"windows_server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+</span></span>	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+						"version": str,
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+		},
+	],
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+<span class="removal">	"complianceLevel": int,</span>
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+<span class="removal">	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+</span>	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+						"version": str,
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+		},
+	],
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+<span class="addition">		"windows_server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+</span>	},
+	"id": str,
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+						"version": str,
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+		},
+	],
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+<span class="addition">	"complianceLevel": int,</span>
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"windows_server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+<span class="addition">	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+</span>	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+<span class="removal">						"version": str,</span>
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+		},
+	],
+<span class="addition">	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+</span>	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"windows_server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"windows": str,
+				"osx": str,
+			},
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+<span class="removal">		"windows_server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+</span>	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+<span class="addition">					"natives-windows-32": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+</span><span class="addition">					"natives-windows-64": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+</span>				},
+			},
+			"name": str,
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows-32": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows-64": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+<span class="removal">	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+</span>	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+<span class="addition"><span class="removal">		"windows_server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+</span></span>	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+<span class="removal">					"natives-windows-32": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+</span><span class="removal">					"natives-windows-64": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+</span>				},
+			},
+			"name": str,
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"mainClass": str,
+	"minecraftArguments": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+		},
+	],
+<span class="addition">	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+</span>	"mainClass": str,
+<span class="removal">	"minecraftArguments": str,</span>
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+<span class="addition">	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+							"version": str,
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+</span>	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+<span class="addition">					"natives-macos": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+</span>					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+							"version": str,
+<span class="addition">							"arch": str,</span>
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-macos": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+							"version": str,
+							"arch": str,
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+<span class="addition">		"client_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+</span>		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+<span class="addition">		"server_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+</span>	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-macos": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+<span class="removal">					"natives-osx": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+</span>				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+			"natives": {
+				"osx": str,
+				"linux": str,
+				"windows": str,
+			},
+			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+							"version": str,
+							"arch": str,
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"client_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+				"classifiers": {
+					"natives-macos": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+			"natives": {
+				"osx": str,
+				"linux": str,
+				"windows": str,
+			},
+<span class="removal">			"extract": {
+				"exclude": [
+					str,
+				],
+			},
+</span>		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+							"version": str,
+							"arch": str,
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"client_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+<span class="removal">				"classifiers": {
+<span class="addition">					"linux-x86_64": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+</span>					"natives-linux": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-macos": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+					"natives-windows": {
+						"path": str,
+						"sha1": str,
+						"size": int,
+						"url": str,
+					},
+				},
+</span>			},
+			"name": str,
+<span class="removal">			"natives": {
+				"linux": str,
+				"osx": str,
+				"windows": str,
+			},
+</span>			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+							"version": str,
+							"arch": str,
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"client_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+<span class="addition">							"has_quick_plays_support": bool,</span>
+<span class="addition">							"is_quick_play_singleplayer": bool,</span>
+<span class="addition">							"is_quick_play_multiplayer": bool,</span>
+<span class="addition">							"is_quick_play_realms": bool,</span>
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+<span class="removal">							"version": str,</span>
+							"arch": str,
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"client_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td><td><pre>{
+	"arguments": {
+		"game": [
+			str,
+			{
+				"rules": [
+					{
+						"action": str,
+						"features": {
+							"is_demo_user": bool,
+							"has_custom_resolution": bool,
+							"has_quick_plays_support": bool,
+							"is_quick_play_singleplayer": bool,
+							"is_quick_play_multiplayer": bool,
+							"is_quick_play_realms": bool,
+						},
+					},
+				],
+				"value": str,
+				[
+					str,
+				],
+			},
+		],
+		"jvm": [
+			{
+				"rules": [
+					{
+						"action": str,
+						"os": {
+							"name": str,
+							"arch": str,
+						},
+					},
+				],
+				"value": [
+					str,
+				],
+				str,
+			},
+			str,
+		],
+	},
+	"assetIndex": {
+		"id": str,
+		"sha1": str,
+		"size": int,
+		"totalSize": int,
+		"url": str,
+	},
+	"assets": str,
+	"complianceLevel": int,
+	"downloads": {
+		"client": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"client_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+		"server_mappings": {
+			"sha1": str,
+			"size": int,
+			"url": str,
+		},
+	},
+	"id": str,
+	"javaVersion": {
+		"component": str,
+		"majorVersion": int,
+	},
+	"libraries": [
+		{
+			"downloads": {
+				"artifact": {
+					"path": str,
+					"sha1": str,
+					"size": int,
+					"url": str,
+				},
+			},
+			"name": str,
+			"rules": [
+				{
+					"action": str,
+					"os": {
+						"name": str,
+					},
+				},
+			],
+		},
+	],
+	"logging": {
+		"client": {
+			"argument": str,
+			"file": {
+				"id": str,
+				"sha1": str,
+				"size": int,
+				"url": str,
+			},
+			"type": str,
+		},
+	},
+	"mainClass": str,
+	"minimumLauncherVersion": int,
+	"releaseTime": str,
+	"time": str,
+	"type": str,
+},
+</pre></td></tr>
+        </table>
+    </div>
+</body>
