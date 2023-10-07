@@ -1,4 +1,3 @@
-from .Node import Node
 from .Version import Version
 from random import randint
 import os
@@ -16,8 +15,9 @@ def generate_colors(n: int, mix=[255, 255, 255]) -> list[str]:
 
 
 class HTMLGenerator:
-    def __init__(self, version_list) -> None:
+    def __init__(self, version_list: list[Version], file_name: str) -> None:
         self.__load_pattern()
+        self.file_name = file_name
         self._version_list = version_list
 
     def __load_pattern(self) -> None:
@@ -25,6 +25,7 @@ class HTMLGenerator:
             self.page = page.read()
 
     def generate_html(self, L: list[Version]) -> str:
+        self.page = self.page.replace("${file_name}", self.file_name)
         self.__colors = generate_colors(len(L))
         self.__make_header(L)
         self.__make_versions(L)

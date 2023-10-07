@@ -86,13 +86,13 @@
 <body>
     <div id="header">
         <h1>Scyblaster Data</h1>
-        <h2>Difference between ${file_name}</h2>
+        <h2>Difference between asset indexes</h2>
     </div>
 
     <div id="mainVersions">
         <h3>Version history (Hover for expanding the cards)</h3>
-        <div>${formats}</div>
-        <div>${versions}</div>
+        <div><div style="flex:93; background-color: #E9E0EC;">F 0</div><div style="flex:34; background-color: #C99EC9;">F 1</div><div style="flex:579; background-color: #D0948D;">F 2</div></div>
+        <div><div style="flex:35">Old Alpha</div><div style="flex:26">Old Beta</div><div style="flex:0">1.0</div><div style="flex:2">1.1</div><div style="flex:8">1.2</div><div style="flex:5">1.3</div><div style="flex:8">1.4</div><div style="flex:22">1.5</div><div style="flex:21">1.6</div><div style="flex:79">1.7</div><div style="flex:84">1.8</div><div style="flex:21">1.9</div><div style="flex:19">1.10</div><div style="flex:23">1.11</div><div style="flex:60">1.12</div><div style="flex:51">1.13</div><div style="flex:45">1.14</div><div style="flex:36">1.15</div><div style="flex:50">1.16</div><div style="flex:28">1.17</div><div style="flex:34">1.18</div><div style="flex:56">1.19</div><div style="flex:15">1.20</div></div>
     </div>
 
     <div style="display: flex; flex-direction: row; align-items: center;">
@@ -105,9 +105,35 @@
     <div id="hrule"></div>
     <div id="table">
         <table>
-            <tr style="text-align: center;">${Indexes}</tr>
-            <tr>${Versions}</tr>
-            <tr style="vertical-align: top;">${struct}</tr>
+            <tr style="text-align: center;"><td style="background-color: #E9E0EC">Format 0</td><td style="background-color: #C99EC9">Format 1</td><td style="background-color: #D0948D">Format 2</td></tr>
+            <tr><td>rd-132211 - 13w23b  </td><td>13w24a - 13w48b  </td><td>13w49a - 23w40a  </td></tr>
+            <tr style="vertical-align: top;"><td><pre>{
+<span class="removal">	"map_to_resources": bool,</span>
+	"objects": {
+		"str_1": {
+			"hash": str,
+			"size": int,
+		},
+	},
+},
+</pre></td><td><pre>{
+	"objects": {
+		"str_1": {
+			"hash": str,
+			"size": int,
+		},
+	},
+<span class="addition"><span class="removal">	"virtual": bool,</span></span>
+},
+</pre></td><td><pre>{
+	"objects": {
+		"str_1": {
+			"hash": str,
+			"size": int,
+		},
+	},
+},
+</pre></td></tr>
         </table>
     </div>
 </body>

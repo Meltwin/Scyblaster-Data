@@ -12,4 +12,4 @@ parser = ArgumentParser()
 parser.add_argument("module", choices=MODULES.keys())
 
 args = parser.parse_known_args()[0]
-MODULES[args.module]()
+MODULES[args.module](parser)

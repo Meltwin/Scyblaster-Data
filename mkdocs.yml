@@ -10,6 +10,7 @@ nav:
   - API DTO Formats:
     - Version List: formats/version_list.md
     - Version Descriptor: formats/version_descriptor.md
+    - Asset Index: formats/asset_index.md
 theme:
   name: material
   palette:

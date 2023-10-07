@@ -1,4 +1,4 @@
-There is actually **18** different JSON structures for the version descriptor.
+There was **18** different JSON structures registered for the version descriptor at the last analysis (10/07/2023 22:46:23).
 === "F1"
 	For versions:
 
@@ -657,31 +657,7 @@ There is actually **18** different JSON structures for the version descriptor.
 						"url": str,
 					},
 					"classifiers": 	{
-						"natives-linux": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-osx": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows-32": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows-64": 	{
+						"str_1": 	{
 							"path": str,
 							"sha1": str,
 							"size": int,
@@ -776,31 +752,7 @@ There is actually **18** different JSON structures for the version descriptor.
 						"url": str,
 					},
 					"classifiers": 	{
-						"natives-linux": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-osx": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows-32": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows-64": 	{
+						"str_1": 	{
 							"path": str,
 							"sha1": str,
 							"size": int,
@@ -899,31 +851,7 @@ There is actually **18** different JSON structures for the version descriptor.
 						"url": str,
 					},
 					"classifiers": 	{
-						"natives-linux": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-osx": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows-32": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows-64": 	{
+						"str_1": 	{
 							"path": str,
 							"sha1": str,
 							"size": int,
@@ -1777,25 +1705,7 @@ There is actually **18** different JSON structures for the version descriptor.
 						"url": str,
 					},
 					"classifiers": 	{
-						"linux-x86_64": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-linux": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-macos": 	{
-							"path": str,
-							"sha1": str,
-							"size": int,
-							"url": str,
-						},
-						"natives-windows": 	{
+						"str_1": 	{
 							"path": str,
 							"sha1": str,
 							"size": int,
@@ -1979,12 +1889,7 @@ There is actually **18** different JSON structures for the version descriptor.
 							{
 							"action": str,
 							"features": 	{
-								"is_demo_user": bool,
-								"has_custom_resolution": bool,
-								"has_quick_plays_support": bool,
-								"is_quick_play_singleplayer": bool,
-								"is_quick_play_multiplayer": bool,
-								"is_quick_play_realms": bool,
+								"str_1": bool,
 							},
 						},
 					],
@@ -2107,12 +2012,7 @@ There is actually **18** different JSON structures for the version descriptor.
 							{
 							"action": str,
 							"features": 	{
-								"is_demo_user": bool,
-								"has_custom_resolution": bool,
-								"has_quick_plays_support": bool,
-								"is_quick_play_singleplayer": bool,
-								"is_quick_play_multiplayer": bool,
-								"is_quick_play_realms": bool,
+								"str_1": bool,
 							},
 						},
 					],

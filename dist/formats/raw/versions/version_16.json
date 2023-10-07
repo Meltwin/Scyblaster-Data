@@ -7,12 +7,7 @@
 					{
 						"action": str,
 						"features": {
-							"is_demo_user": bool,
-							"has_custom_resolution": bool,
-							"has_quick_plays_support": bool,
-							"is_quick_play_singleplayer": bool,
-							"is_quick_play_multiplayer": bool,
-							"is_quick_play_realms": bool,
+							"str_1": bool,
 						},
 					},
 				],

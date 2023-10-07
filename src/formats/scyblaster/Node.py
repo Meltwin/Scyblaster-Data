@@ -1,14 +1,17 @@
 from typing import Any, Tuple
 from abc import ABC, abstractmethod
+from copy import deepcopy
 
 Primitives = [int, float, bool, str]
 STEP = "\t"
 
 
 class Node(ABC):
-    def __init__(self, depth: int) -> None:
+    def __init__(self, depth: int, colapse_at: int) -> None:
         self.child = None
         self.depth = depth
+        self.colapse_at = colapse_at
+        self.n_groups = 0
 
     @abstractmethod
     def update(self, json: dict | str | float) -> None:
@@ -36,43 +39,83 @@ class NodeObj(Node):
     Childs are marked by a str key and can have multiple values.
     """
 
-    def __init__(self, json: dict, depth: int) -> None:
-        super().__init__(depth)
+    def __init__(self, json: dict, depth=0, colapse_at=4) -> None:
+        super().__init__(depth, colapse_at)
         self.child = {}
         self.update(json)
 
+    def get_group_str(self, l: list[str]) -> str:
+        for n in l:
+            if "str_" in n:
+                return n
+        self.n_groups += 1
+        return f"str_{self.n_groups}"
+    
+    def has_group_str(self, l: list[str]) -> bool:
+        for n in l:
+            if "str_" in n:
+                return True
+        return False
+
     def update(self, json: dict[str, Any]) -> None:
         for name, elem in json.items():
-            # Look if key exist or not
-            # Create array at this key if not
-            if name not in self.child.keys():
-                self.child[name] = []
+            names_found = []
 
-            # If primitive, put it in the array
-            if type(elem) in Primitives:
-                for child_elem in self.child[name]:
-                    if type(child_elem) is type(elem):
-                        break
-                else:
-                    self.child[name].append(elem)
-
-            # If obj, merge it with the NodeObj elem inside
+            # Detecting if the object is already created with another tag, hence don't make it two times
             if type(elem) is dict:
-                for child_elem in self.child[name]:
-                    if type(child_elem) is NodeObj:
-                        child_elem.update(elem)
-                        break
-                else:
-                    self.child[name].append(NodeObj(elem, self.depth + 1))
+                obj = NodeObj(elem,colapse_at=self.colapse_at)
+            elif type(elem) is list:
+                obj = NodeArray(elem,colapse_at=self.colapse_at)
+            else:
+                obj = elem
 
-            # If list, merge it with the NodeArray elem inside
-            if type(elem) is list:
-                for child_elem in self.child[name]:
-                    if type(child_elem) is NodeArray:
-                        child_elem.update(elem)
-                        break
-                else:
-                    self.child[name].append(NodeArray(elem, self.depth + 1))
+            # Check if there are cloned structures in childs
+            for child_name in self.child.keys():
+                if len(self.child[child_name]):
+                    if (type(self.child[child_name][0]) is type(obj)) and (self.child[child_name][0] == obj):
+                        names_found.append(deepcopy(child_name))
+            
+            # If too much clones, just group them
+            if (len(names_found) >= self.colapse_at or self.has_group_str(names_found)):
+                group = self.get_group_str(names_found)
+                if group not in names_found:
+                    self.child[group] = [self.child[names_found[0]][0]]
+                for n in names_found:
+                    if n != group:
+                        self.child.pop(n)
+
+            # Else add it normaly 
+            else:
+                # Look if key exist or not
+                # Create array at this key if not
+                if name not in self.child.keys():
+                    self.child[name] = []
+
+                # If primitive, put it in the array
+                if type(elem) in Primitives:
+                    for child_elem in self.child[name]:
+                        if type(child_elem) is type(elem):
+                            break
+                    else:
+                        self.child[name].append(elem)
+
+                # If obj, merge it with the NodeObj elem inside
+                if type(elem) is dict:
+                    for child_elem in self.child[name]:
+                        if type(child_elem) is NodeObj:
+                            child_elem.update(elem)
+                            break
+                    else:
+                        self.child[name].append(NodeObj(elem, self.depth + 1, self.colapse_at))
+
+                # If list, merge it with the NodeArray elem inside
+                if type(elem) is list:
+                    for child_elem in self.child[name]:
+                        if type(child_elem) is NodeArray:
+                            child_elem.update(elem)
+                            break
+                    else:
+                        self.child[name].append(NodeArray(elem, self.depth + 1, self.colapse_at))
 
     def __eq__(self, __value: Node) -> bool:
         if type(__value) is not NodeObj:
@@ -161,8 +204,8 @@ class NodeObj(Node):
 
 
 class NodeArray(Node):
-    def __init__(self, json: list, depth: int) -> None:
-        super().__init__(depth)
+    def __init__(self, json: list, depth=0, colapse_at=3) -> None:
+        super().__init__(depth, colapse_at)
         self.child = []
         self.update(json)
 
@@ -183,7 +226,7 @@ class NodeArray(Node):
                         child_elem.update(elem)
                         break
                 else:
-                    self.child.append(NodeObj(elem, self.depth + 1))
+                    self.child.append(NodeObj(elem, self.depth + 1, self.colapse_at))
 
             # If list, merge it with the NodeArray elem inside
             if type(elem) is list:
@@ -192,7 +235,7 @@ class NodeArray(Node):
                         child_elem.update(elem)
                         break
                 else:
-                    self.child.append(NodeArray(elem, self.depth + 1))
+                    self.child.append(NodeArray(elem, self.depth + 1, self.colapse_at))
 
     def __eq__(self, __value: Any) -> bool:
         if type(__value) is not NodeArray:

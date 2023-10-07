@@ -5,7 +5,7 @@ We will describe here the different JSON files and their structures.
 
 ## Version list 
 
-The first file to use to check for new versions or for the version description is the version list. 
+The first file used to check for new versions or for the version description is the version list. 
 This list can be found on the Piston-Meta API at the address:
 
 ```Text
@@ -36,9 +36,9 @@ The structure of this file is:
 ```
 
 !!! info "Order of the versions"
-    The versions order in the `"versions"` tag is starting from the newest to the oldest. Thus 0 being the latest version released by Minecraft and the last one being the first ever version released.
+    The versions order in the `"versions"` tag goes from the newest to the oldest. Thus 0 being the latest version released by Minecraft and the last one being the first ever version released.
 
-To get a description of the assets, libraries and other settings to check for this Minecraft version, you should download the file in the `"url"`, and check its hash with the SHA-1 algorithm (and compare it with the `"sha1"` field).
+To get a description of the assets, libraries and other settings to check for this Minecraft version, you ought to download the file in the `"url"` field, and check its hash with the SHA-1 algorithm (and compare it with the `"sha1"` field) and finally parse it to get all the data you need.
 
 
 ### Version Name
