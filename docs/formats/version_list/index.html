@@ -414,6 +414,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Asset Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -496,7 +516,7 @@
 <p>There are several files used by the Minecraft launcher to get all the necessary datas ready for the minecraft client. 
 We will describe here the different JSON files and their structures.</p>
 <h2 id="version-list">Version list</h2>
-<p>The first file to use to check for new versions or for the version description is the version list. 
+<p>The first file used to check for new versions or for the version description is the version list. 
 This list can be found on the Piston-Meta API at the address:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://piston-meta.mojang.com/mc/game/version_manifest_v2.json
 </code></pre></div>
@@ -522,9 +542,9 @@ This list can be found on the Piston-Meta API at the address:</p>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Order of the versions</p>
-<p>The versions order in the <code>"versions"</code> tag is starting from the newest to the oldest. Thus 0 being the latest version released by Minecraft and the last one being the first ever version released.</p>
+<p>The versions order in the <code>"versions"</code> tag goes from the newest to the oldest. Thus 0 being the latest version released by Minecraft and the last one being the first ever version released.</p>
 </div>
-<p>To get a description of the assets, libraries and other settings to check for this Minecraft version, you should download the file in the <code>"url"</code>, and check its hash with the SHA-1 algorithm (and compare it with the <code>"sha1"</code> field).</p>
+<p>To get a description of the assets, libraries and other settings to check for this Minecraft version, you ought to download the file in the <code>"url"</code> field, and check its hash with the SHA-1 algorithm (and compare it with the <code>"sha1"</code> field) and finally parse it to get all the data you need.</p>
 <h3 id="version-name">Version Name</h3>
 <p>This tag correspond to the public version name. There are several formats, but three main for the recent version:</p>
 <ul>

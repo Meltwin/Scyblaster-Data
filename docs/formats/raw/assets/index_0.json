@@ -1,0 +1,9 @@
+{
+	"map_to_resources": bool,
+	"objects": {
+		"str_1": {
+			"hash": str,
+			"size": int,
+		},
+	},
+},

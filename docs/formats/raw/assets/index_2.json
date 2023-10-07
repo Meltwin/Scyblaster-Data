@@ -1,0 +1,8 @@
+{
+	"objects": {
+		"str_1": {
+			"hash": str,
+			"size": int,
+		},
+	},
+},

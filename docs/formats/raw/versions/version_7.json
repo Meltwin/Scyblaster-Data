@@ -35,31 +35,7 @@
 					"url": str,
 				},
 				"classifiers": {
-					"natives-linux": {
-						"path": str,
-						"sha1": str,
-						"size": int,
-						"url": str,
-					},
-					"natives-osx": {
-						"path": str,
-						"sha1": str,
-						"size": int,
-						"url": str,
-					},
-					"natives-windows": {
-						"path": str,
-						"sha1": str,
-						"size": int,
-						"url": str,
-					},
-					"natives-windows-32": {
-						"path": str,
-						"sha1": str,
-						"size": int,
-						"url": str,
-					},
-					"natives-windows-64": {
+					"str_1": {
 						"path": str,
 						"sha1": str,
 						"size": int,

@@ -84,25 +84,7 @@
 					"url": str,
 				},
 				"classifiers": {
-					"linux-x86_64": {
-						"path": str,
-						"sha1": str,
-						"size": int,
-						"url": str,
-					},
-					"natives-linux": {
-						"path": str,
-						"sha1": str,
-						"size": int,
-						"url": str,
-					},
-					"natives-macos": {
-						"path": str,
-						"sha1": str,
-						"size": int,
-						"url": str,
-					},
-					"natives-windows": {
+					"str_1": {
 						"path": str,
 						"sha1": str,
 						"size": int,
